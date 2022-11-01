@@ -7,6 +7,6 @@ function I=CompTrapezoid(f,a,b,n)
         I=I+2*f(x);
     end
     I=(h/2)*I;
-    disp('The aproximated value of the integral of f(x) from a to b is')
+    disp('The approximated value of the integral of f(x) from a to b is')
     fprintf('%.8f\n',I)
 end

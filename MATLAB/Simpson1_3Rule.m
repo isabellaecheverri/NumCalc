@@ -16,6 +16,6 @@ function I=Simpson1_3Rule(f,a,b,n)
         end
     end
     I=(h/3)*I;
-    disp('The aproximated value of the integral of f(x) from a to b is')
+    disp('The approximated value of the integral of f(x) from a to b is')
     fprintf('%.8f\n',I)
 end

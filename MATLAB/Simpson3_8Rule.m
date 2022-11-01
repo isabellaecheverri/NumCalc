@@ -5,6 +5,6 @@ function I=Simpson3_8Rule(f,a,b)
     x2=(a+2*b)/3;
     I=f(a)+3*f(x1)+3*f(x2)+f(b);
     I=(3*h/8)*I;
-    disp('The aproximated value of the integral of f(x) from a to b is')
+    disp('The approximated value of the integral of f(x) from a to b is')
     fprintf('%.8f\n',I)
 end
