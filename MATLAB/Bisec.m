@@ -14,7 +14,7 @@ function Bisec(f,a,b,Tol,N)
         return
     end
     if f(a)*f(b)>0
-        disp("There is no root in the given interval")
+        disp("There is possibly no root in the given interval")
         return
     end
     i=1;

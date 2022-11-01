@@ -1,7 +1,10 @@
 function [x]=GaussPivTot(A,b)
     disp("Gaussian Elimination with Total Pivot")
+    if det(A)==0
+        error('The system has no solution, the determinant of A is zero')
+    end
     [U,B,marcas]=ElimPivTot(A,b);
-    x=substitution(U,B);
+    x=RegSubst(U,B);
     f=size(x,2);
     xtemp=[];
     for i=1:f
@@ -23,6 +26,8 @@ function [U,B,marcas]=ElimPivTot(A,b)
         %submatrix
         subm=abs(Ab(j:f,j:c-1));
         [mi,mj]=find(subm==max(subm,[],'all'));
+        mi=mi(1);
+        mj=mj(1);
         %row change
         temp=Ab(j,j:end);
         Ab(j,j:end)=Ab(mi+j-1,j:end);
@@ -43,16 +48,4 @@ function [U,B,marcas]=ElimPivTot(A,b)
     end
     U=Ab(:,1:c-1);
     B=Ab(:,end);
-end
-
-function [x]=substitution(U,B)
-    [f,c]=size(U);
-    x(f)=B(f)/U(f,f);
-    for i=f-1:-1:1
-        sum=0;
-        for j=i+1:f
-            sum=sum+U(i,j)*x(j);
-        end
-        x(i)=(B(i)-sum)/U(i,i);
-    end
 end

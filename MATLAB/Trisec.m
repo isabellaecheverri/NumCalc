@@ -66,7 +66,7 @@ function Trisec(f,a,b,Tol,N)
         return
     end
     if E<=Tol
-        disp(['An aproximation of the root was found with a value ' ...
+        disp(['An approximation of the root was found with a value ' ...
             'of ']+ string(xm) + " and an error of " + string(E))
         return
     end

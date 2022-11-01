@@ -1,7 +1,15 @@
 function [x]=SimpleGauss(A,b)
     disp("Simple Gaussian Elimination")
+    if det(A)==0
+        error('The system has no solution, the determinant of A is zero')
+    end
+    for i=1:size(A,2)
+        if A(i,i)==0
+            error('There is a 0 in the diagonal, consider changing the rows')
+        end
+    end
     [U,B]=Elim(A,b);
-    x=substitution(U,B);
+    x=RegSubst(U,B);
     disp('Solution')
     disp(x)
 end
@@ -20,16 +28,4 @@ function [U,B]=Elim(A,b)
     end
     U=Ab(:,1:c-1);
     B=Ab(:,end);
-end
-
-function [x]=substitution(U,B)
-    [f,c]=size(U);
-    x(f)=B(f)/U(f,f);
-    for i=f-1:-1:1
-        sum=0;
-        for j=i+1:f
-            sum=sum+U(i,j)*x(j);
-        end
-        x(i)=(B(i)-sum)/U(i,i);
-    end
 end

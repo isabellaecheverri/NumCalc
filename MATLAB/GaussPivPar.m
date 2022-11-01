@@ -1,21 +1,12 @@
 function [x]=GaussPivPar(A,b)
     disp("Gaussian Elimination with Partial Pivot")
+    if det(A)==0
+        error('The system has no solution, the determinant of A is zero')
+    end
     [U,B]=ElimPivPar(A,b);
-    x=substitution(U,B);
+    x=RegSubst(U,B);
     disp('Solution')
     disp(x)
-end
-
-function [x]=substitution(U,B)
-    [f,c]=size(U);
-    x(f)=B(f)/U(f,f);
-    for i=f-1:-1:1
-        sum=0;
-        for j=i+1:f
-            sum=sum+U(i,j)*x(j);
-        end
-        x(i)=(B(i)-sum)/U(i,i);
-    end
 end
 
 function [U,B]=ElimPivPar(A,b)
@@ -26,6 +17,7 @@ function [U,B]=ElimPivPar(A,b)
     for j=1:c-2
         col=abs(Ab(j:f,j));
         m=find(col==max(col));
+        m=m(1);
         temp=Ab(j,:);
         Ab(j,:)=Ab(m+j-1,:);
         Ab(m+j-1,:)=temp;
