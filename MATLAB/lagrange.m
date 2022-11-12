@@ -12,19 +12,19 @@ function c=lagrange(X,Y)
     str=[];
     for i=1:n
         if sign(X(i))==-1
-            str=[str "(x + "+sprintf('%.5f',abs(X(i)))+")"];
+            str=[str "*(x + "+sprintf('%.5f',abs(X(i)))+")"];
         elseif sign(X(i))==1
-            str=[str "(x - "+sprintf('%.5f',X(i))+")"];
+            str=[str "*(x - "+sprintf('%.5f',X(i))+")"];
         else
-            str=[str "(x)"];
+            str=[str "*(x)"];
         end
     end
     Lp=[];
     for i=1:n
-        Lp=[Lp sprintf('%.5f',L(i))+"*"+strjoin(string(str(1:end~=i)))];
+        Lp=[Lp sprintf('%.5f',L(i))+strjoin(string(str(1:end~=i)))];
     end
     tab=[string(0:n-1)
-        Lp]';
+        erase(Lp,'*')]';
     tab=array2table(tab);
     tab.Properties.VariableNames=["i" "Li(x)"];
     tab.i=categorical(tab.i);
@@ -35,14 +35,14 @@ function c=lagrange(X,Y)
     disp('Polynomial Coefficients')
     fprintf('%.5f\n',c)
     %to display polynomial
-    pol=string(c(1))+'*'+strjoin(string(str(2:end)),'*');
+    pol=string(c(1))+strjoin(string(str(2:end)));
     for i=2:n-1
         if sign(c(i))==1
-            pol=pol+" + "+string(c(i))+'*'+strjoin(string(str(1:end~=i)));
+            pol=pol+" + "+string(c(i))+strjoin(string(str(1:end~=i)));
         elseif sign(c(i))==-1
-            pol=pol+" - "+string(abs(c(i)))+'*'+strjoin(string(str(1:end~=i)));
+            pol=pol+" - "+string(abs(c(i)))+strjoin(string(str(1:end~=i)));
         end
     end
     disp('Polynomial')
-    disp(pol)
+    disp(erase(pol,'*'))
 end
