@@ -9,7 +9,7 @@ function [x]=cholFact(A,b)
     disp('Upper Triangular Matrix U')
     disp(U)
     z=ProgSubst(L,b);
-    x=RegSubst(U,z');
+    x=RegSubst(U,z.');
     disp('Progressive substitution Lz=b')
     disp(z);
     disp('Regresive substitution Ux=z, solution')
