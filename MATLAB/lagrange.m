@@ -36,7 +36,7 @@ function c=lagrange(X,Y)
     fprintf('%.5f\n',c)
     %to display polynomial
     pol=string(c(1))+strjoin(string(str(2:end)));
-    for i=2:n-1
+    for i=2:n
         if sign(c(i))==1
             pol=pol+" + "+string(c(i))+strjoin(string(str(1:end~=i)));
         elseif sign(c(i))==-1
