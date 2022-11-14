@@ -1,6 +1,10 @@
-function [t,y]=Euler(f,t0,tn,y0,h)
+function [t,y]=Euler(f,t0,tn,y0,h,n)
     disp('Euler Method')
-    n=ceil(abs(tn-t0)/h);
+    if h==0
+        h=tn/n;
+    elseif n==0
+        n=ceil(abs(tn-t0)/h);
+    end
     t=t0:h:tn;  
     t=t';
     y=zeros(n,1);
