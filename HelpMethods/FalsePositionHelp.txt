@@ -1,0 +1,20 @@
+False Position Help
+
+This method is used for finding the roots of any continuous function over an interval. It uses an equation of the form f(x) = 0, and iterative calculations to solve for x.
+
+Remember to take into account the following recommendations to ensure the well behavior of the numerical method.
+
+
+- Both values, a and b must exist in the domain of the function.
+
+- The function f must be continuous in the closed interval [a,b].
+
+- Its necessary	that a < b.
+
+- For the method to converge, it must be true that f(a) * f(b) < 0, so that there is a change of sign and therefore a root in [a,b].
+
+- Tolerance must have a positive value.
+
+- If possible, check graphically that there is an unique root in [a,b], if there are multiple roots it may damage the runtime considerably.
+
+- In general, do not divide by zero.

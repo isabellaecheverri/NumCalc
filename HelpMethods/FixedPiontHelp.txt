@@ -1,0 +1,19 @@
+Fixed Point Help
+
+This method is used for finding the roots of any continuous function over an interval. It uses an equation of the form f(x) = 0, transformed into an g(x) = x expression, and iterative calculations in order to solve for x.
+
+Remember to take into account the following recommendations to ensure the convergence of the numerical method.
+
+- Both values, a and b must exist in the domain of the function, such that a < b.
+
+- The function f must be continuous in the closed interval [a,b].
+
+- Also you need to make sure that the function g is smooth and continuous (it's first and second derivatives must exist) in [a,b].	
+
+- For the method to converge, it must be true that for all x in [a,b], g(x) also belongs in [a,b]. (The function g must be continuous and closed under a square).
+
+- To guarantee uniqueness of a fixed point in the interval [a,b], you must verify that the absolute value of g'(x) for all x in [a,b], is always less than 1. To do this, you might graph the derivative of g.
+
+- Tolerance must have a positive value.
+
+- In general, do not divide by zero.

@@ -1,0 +1,17 @@
+Secant method Help
+
+Remember to apply the advices ahead to guarantee the well behavior of the numerical method.
+
+This method is used for finding the roots of any continuous function over an interval. This method is an approximation of Newton's method, and hence, it uses an equation of the form f(x) = 0, transformed into an g(x) = x expression, and iterative calculations in order to solve for x.
+
+- Please make sure that the function f has a root.
+
+- Also, the initial approximations are vital. The method requires two initial values which should be chosen to lie close to the root, so it performs better.
+
+- You need to make sure that the function f is continuous.
+
+- The tolerance must have a positive value.
+
+- Try not to use it if there are multiple roots up close (you may check graphically). If this is the case, try the Multiple Roots Method.
+
+- In general, do not divide by zero.

@@ -1,0 +1,13 @@
+Cholesky Factorization Help
+
+For solving linear equation systems of the form Ax = b, where A is an n x n matrix, b is the solution vector of dimension n x 1, and x is the unknown vector x1, x2, ..., xn. 
+
+The suggestions left below, allow the code to execute optimally, taking into account the mathematical constrains of the problem. 
+
+- The determinant of the matrix A cannot be zero.
+
+- The main diagonal of the matrix A must not include any zero.
+
+- The matrix A must be square and must have the same number of rows than the vector b.
+
+- During the steps of the algorithm, the elements of both matrices L and U may be complex (a + ib). This is completely normal, and Matlab handles them as nothing happened. Nevertheless, the unknown vector x at the end must be filled with just real numbers.
