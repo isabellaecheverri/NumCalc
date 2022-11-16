@@ -10,8 +10,6 @@ Remember follow the recommendations below to guarantee the well behavior of the 
 
 - Input a function f with x as its only independent variable.
 
-- The number of divisions n must be strictly positive. 
-
 - If a negative value is returned, the average area under the curve is located under the x axis.
 
 - In general, do not divide by zero.
