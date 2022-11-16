@@ -1,4 +1,4 @@
-DooLittle Factorization Help
+Doolittle Factorization Help
 
 For solving linear equation systems of the form Ax = b, where A is an n x n matrix, b is the solution vector of dimension n x 1, and x is the unknown vector x1, x2, ..., xn. 
 
