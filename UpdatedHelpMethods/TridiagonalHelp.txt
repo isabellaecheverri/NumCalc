@@ -1,0 +1,19 @@
+Tridiagonal gaussian elimination
+
+The tridiagonal matrix algorithm, also known as the Thomas algorithm is a simplified form of Gaussian elimination that can be used to solve tridiagonal systems of equations of the form Ax = b.
+
+We encourage you to try following this guidelines in order to prevent any exception, error or mistake from the method.
+
+- The matrix A MUST be tridiagonal. This is, the only nonzero values must be at the main and secondary diagonals of the matrix.
+
+- The determinant of the matrix A cannot be zero.
+
+- The matrix A must be free of zeros in its principal diagonal, since it is not possible to divide by zero.
+
+- The matrix A must be square and must have the same number of rows than the vector b.
+
+- Try not to input any near zero number in the main diagonal of the matriz, it causes near zero division, and it may hurt the convergence, precision and velocity of the method. If this is the case, try a Pivoting Gauss method instead.
+
+- Thomas's algorithm is not stable in general, but is so in several special cases, such as when the matrix is diagonally dominant or symmetric positive definite.
+
+- If stability is required in the general case, Gaussian elimination with partial pivoting is recommended instead.

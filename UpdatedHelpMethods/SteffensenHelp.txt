@@ -1,0 +1,15 @@
+Steffensen Help
+
+This method is used for finding the roots of any continuous function over an interval. It uses an equation of the form f(x) = 0.
+
+We encourage you to try following this guidelines in order to prevent any exception, error or mistake from the method.
+
+- The function f must be continuous and differentiable over the real line.
+
+- Try approximating the initial value x0 graphically.
+
+- The function f must approximately satisfy that -1 < f'(X) < 0, where X is the root.
+
+- If x0 is far from X, or the condition above is not met, the method may converge slowly.
+
+- The tolerance value must be positive, and preferably close to zero.

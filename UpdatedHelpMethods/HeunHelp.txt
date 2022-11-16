@@ -1,0 +1,15 @@
+Heun's method help
+
+This method is used for numerical solving first order differential equations of the form dy/dt = f(t,y), y(t0) = y0. It assumes continuity and that the desired function exists. Heun's Method considers the tangent lines to the solution curve at both ends of the interval, one which overestimates, and one which underestimates the ideal vertical coordinates.
+
+It is considered to be better than Euler's method.
+
+Remember follow the recommendations below to guarantee the well behavior of the numerical method.
+
+- The function f must be continuous and smooth.
+
+- Input the boundary condition (t0, y0) in the curve defined by f.
+
+- The number of steps n, and step size h must be strictly positive.  
+
+- In general, do not divide by zero.

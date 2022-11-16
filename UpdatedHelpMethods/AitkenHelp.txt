@@ -1,0 +1,15 @@
+Aitken's Help
+
+Aitken's process or Aitken extrapolation is a series acceleration method, used for accelerating the rate of convergence of a sequence. This method is a root-finding algorithm, a numerical method for solving equations of the form f(x) = 0.
+
+We encourage you to try following this advices in order to prevent any exception, error or mistake from the method.
+
+- The function f, and the function g must be continuous over the real line.
+
+- Both functions must be only written in terms of the independent variable x.
+
+- Try locating graphically the real root X, then have x0 to be near that root.
+
+- The tolerance value must be positive, and preferably close to zero.
+
+- In general do not divide by any number around the order 10^-16.

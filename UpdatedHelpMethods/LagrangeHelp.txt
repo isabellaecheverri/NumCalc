@@ -1,0 +1,9 @@
+Lagrange Help
+
+Interpolation methods are used for solving a continuous model problem. Given a set of points {(x0, y0), (x1, y1), ..., (xn, yn)}, there exists an unknown function f, that will be approximated via a polynomial of degree n. This function (called the Lagrange polynomial) will be internally continuous and smooth over n derivatives, so that it can be used for prediction purposes.
+
+Remember to take into account the following recommendations to guarantee the well behavior of the numerical method.
+
+- All values of x and y must be different. If there are equal values of x among different points, you are not interpolating a function. If there are equal values of y, the method may not converge to a function that represents the behavior of the distribution.
+
+- Try obtaining the (xi, yi) in the most precise way, since these points remain unchanged, and the rest of the interpolation relies on them.

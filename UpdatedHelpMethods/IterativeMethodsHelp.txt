@@ -1,0 +1,31 @@
+Help for Iterative Methods
+
+These methods are used for solving linear equation systems of the form Ax = b, where A is an n x n matrix, b is the solution vector of dimension n x 1, and x is the unknown vector x1, x2, ..., xn. This is an iterative method, so you may introduce a tolerance value for the absolute error.
+
+The suggestions left below, allow the code to execute optimally, taking into account the mathematical constrains of the problem. Also, these apply for all three methods.
+
+- The matrix A must be invertible, then it must have a non zero determinant.
+
+- The main diagonal of the matrix A must not include any zero.
+
+- The matrix A must be square and must have the same number of rows than the vector b.
+
+- The method will only converge if the spectral radius of the transition matrix p(T) is strictly less than one.
+
+- Also, if the matriz A is strictly diagonally dominant, the method will converge to the unique solution of the system.
+
+- The initial vector x0 us not really important. If you followed the previous advices, the method will converge to the unique solution vector x.
+
+- The tolerance value must be greater than zero. 
+
+For the SOR (relaxation) method.
+
+The relaxation methods improve the convergence of the Gauss Seidel method by refining the approximation at each stage.
+
+- For the new parameter w, if w = 1, the pure Gauss-Seidel method will be executing.
+
+- If w is such that 0 < w < 1, and under-relaxation method will be executed. This method is used for achieving convergence in some non convergent systems by Gauss-Seidel method.
+
+- If w is such that 1 < w < 2, an over-relaxation method will be executed. This method speeds up convergence for slow systems using the Gauss-Seidel method.
+
+- If the matrix A is symmetric and positively defined, the relaxation SOR method is convergent for any w between zero and two.

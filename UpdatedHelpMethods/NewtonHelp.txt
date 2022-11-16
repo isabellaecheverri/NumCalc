@@ -1,0 +1,21 @@
+Newton's method Help
+
+Remember to follow the recommendations ahead to guarantee the well behavior of the numerical method.
+
+This method is used for finding the roots of any continuous function over an interval. This is a widely used Fixed Point variant, and it relies on an equation of the form f(x) = 0, transformed into an g(x) = x expression, with iterative calculations over its derivatives in order to solve for x.
+
+- Be sure that the function f has a root.
+
+- Also, the initial approximation is crucial. Hence it is vital graphing the function first so a point near to the root can be input.
+
+- You need to make sure that the function f is differentiable, and preferably fully continuous. An analytic derivative makes computations significantly simpler. 
+
+- The program considers a function y = f(x), then input a function with just x as its independent variable.
+
+- The tolerance must have a positive value.
+
+- Newton's method is generally faster than its counterpart methods. If the derivative approaches zero, the method loses its speed because is possible to be a case of multiple root.
+
+- Try to visualize graphically if the derivative of f at the root is also zero. If this is the case, the method will not converge. 
+
+- In general, do not divide by zero.

@@ -1,0 +1,11 @@
+Muller's Help
+
+Muller's method is a root-finding algorithm, a numerical method for solving equations of the form f(x) = 0.
+
+We encourage you to try following this guidelines in order to prevent any exception, error or mistake from the method.
+
+- The function f must be continuous over the real line.
+
+- The function takes three initial values, x0, x1, x2, and its recommended that all of them are close to the real root X. Try checking graphically first.
+
+- The tolerance value must be positive, and preferably close to zero.

@@ -1,0 +1,17 @@
+Simpson 3/8 Help
+
+This method is used for numerical integration over the closed interval [a,b]. It uses a truncated Taylor series based on a 3rd order polynomial, and is more precise than the Trapezoid method. 
+
+Remember follow the recommendations below to guarantee the well behavior of the numerical method.
+
+- The boundary conditions must satisfy that a < b.
+
+- The function f must be continuous in the closed interval [a,b]. Even if the discontinuities are integrable, the method does not consider them, and it might increase the error significantly.
+
+- Input a function f with x as its only independent variable.
+
+- The number of divisions n must be strictly positive. 
+
+- If a negative value is returned, the average area under the curve is located under the x axis.
+
+- In general, do not divide by zero.
